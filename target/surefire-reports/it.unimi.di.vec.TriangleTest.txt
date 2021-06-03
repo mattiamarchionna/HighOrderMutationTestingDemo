@@ -1,20 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: it.unimi.di.vec.TriangleTest
 -------------------------------------------------------------------------------
-Tests run: 13, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.238 sec <<< FAILURE!
-it.unimi.di.vec.TriangleTest.testInvalid3()  Time elapsed: 0.235 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: 
-Expecting:
- <SCALENE>
-to be equal to:
- <INVALID>
-but was not.
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at it.unimi.di.vec.TriangleTest.testInvalid3(TriangleTest.java:37)
-
-it.unimi.di.vec.TriangleTest.testInvalid2()  Time elapsed: 0 sec  <<< FAILURE!
+Tests run: 13, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.152 sec <<< FAILURE!
+it.unimi.di.vec.TriangleTest.testInvalid2()  Time elapsed: 0.044 sec  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 Expecting:
  <SCALENE>
@@ -26,10 +14,22 @@ but was not.
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at it.unimi.di.vec.TriangleTest.testInvalid2(TriangleTest.java:31)
 
+it.unimi.di.vec.TriangleTest.testIsosceles3()  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Expecting:
+ <EQUILATERAL>
+to be equal to:
+ <ISOSCELES>
+but was not.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at it.unimi.di.vec.TriangleTest.testIsosceles3(TriangleTest.java:79)
+
 it.unimi.di.vec.TriangleTest.testInvalid()  Time elapsed: 0 sec  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 Expecting:
- <ISOSCELES>
+ <EQUILATERAL>
 to be equal to:
  <INVALID>
 but was not.
@@ -37,4 +37,28 @@ but was not.
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at it.unimi.di.vec.TriangleTest.testInvalid(TriangleTest.java:85)
+
+it.unimi.di.vec.TriangleTest.testEquilateral()  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Expecting:
+ <ISOSCELES>
+to be equal to:
+ <EQUILATERAL>
+but was not.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at it.unimi.di.vec.TriangleTest.testEquilateral(TriangleTest.java:61)
+
+it.unimi.di.vec.TriangleTest.testInvalid3()  Time elapsed: 0.004 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Expecting:
+ <SCALENE>
+to be equal to:
+ <INVALID>
+but was not.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at it.unimi.di.vec.TriangleTest.testInvalid3(TriangleTest.java:37)
 

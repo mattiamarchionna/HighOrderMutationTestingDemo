@@ -1,0 +1,21 @@
+image: maven
+
+build:
+  stage: compile
+  script: mvn compile
+  cache:
+    key: "$CI_COMMIT_REF_NAME"
+    policy: push
+    paths:
+      - target
+
+
+test:
+  stage: test
+  script:
+    - mvn verify
+  cache:
+    key: "$CI_COMMIT_REF_NAME"
+    policy: pull
+    paths:
+      - target

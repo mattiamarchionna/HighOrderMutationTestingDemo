@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="13" failures="3" name="it.unimi.di.vec.TriangleTest" time="0.235" errors="0" skipped="0">
+<testsuite tests="13" failures="5" name="it.unimi.di.vec.TriangleTest" time="0.152" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.11+9-LTS-194"/>
@@ -63,25 +63,11 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testInvalid3" time="0.235">
-    <failure message="
-Expecting:
- &lt;SCALENE&gt;
-to be equal to:
- &lt;INVALID&gt;
-but was not." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
-Expecting:
- &lt;SCALENE&gt;
-to be equal to:
- &lt;INVALID&gt;
-but was not.
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at it.unimi.di.vec.TriangleTest.testInvalid3(TriangleTest.java:37)
-</failure>
-  </testcase>
-  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testInvalid2" time="0">
+  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testInvalidNeg2" time="0.104"/>
+  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testIsosceles1" time="0"/>
+  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testIsosceles2" time="0"/>
+  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testScalene" time="0"/>
+  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testInvalid2" time="0.044">
     <failure message="
 Expecting:
  &lt;SCALENE&gt;
@@ -99,23 +85,35 @@ but was not.
 	at it.unimi.di.vec.TriangleTest.testInvalid2(TriangleTest.java:31)
 </failure>
   </testcase>
-  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testInvalidNeg2" time="0"/>
   <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testInvalid1" time="0"/>
-  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.test1" time="0"/>
   <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testInvalidNeg3" time="0"/>
-  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testEquilateral" time="0"/>
-  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testIsosceles1" time="0"/>
-  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testIsosceles2" time="0"/>
-  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testIsosceles3" time="0"/>
+  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testIsosceles3" time="0">
+    <failure message="
+Expecting:
+ &lt;EQUILATERAL&gt;
+to be equal to:
+ &lt;ISOSCELES&gt;
+but was not." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
+Expecting:
+ &lt;EQUILATERAL&gt;
+to be equal to:
+ &lt;ISOSCELES&gt;
+but was not.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at it.unimi.di.vec.TriangleTest.testIsosceles3(TriangleTest.java:79)
+</failure>
+  </testcase>
   <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testInvalid" time="0">
     <failure message="
 Expecting:
- &lt;ISOSCELES&gt;
+ &lt;EQUILATERAL&gt;
 to be equal to:
  &lt;INVALID&gt;
 but was not." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting:
- &lt;ISOSCELES&gt;
+ &lt;EQUILATERAL&gt;
 to be equal to:
  &lt;INVALID&gt;
 but was not.
@@ -125,6 +123,42 @@ but was not.
 	at it.unimi.di.vec.TriangleTest.testInvalid(TriangleTest.java:85)
 </failure>
   </testcase>
-  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testScalene" time="0"/>
+  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testEquilateral" time="0">
+    <failure message="
+Expecting:
+ &lt;ISOSCELES&gt;
+to be equal to:
+ &lt;EQUILATERAL&gt;
+but was not." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
+Expecting:
+ &lt;ISOSCELES&gt;
+to be equal to:
+ &lt;EQUILATERAL&gt;
+but was not.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at it.unimi.di.vec.TriangleTest.testEquilateral(TriangleTest.java:61)
+</failure>
+  </testcase>
+  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.test1" time="0"/>
+  <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testInvalid3" time="0.004">
+    <failure message="
+Expecting:
+ &lt;SCALENE&gt;
+to be equal to:
+ &lt;INVALID&gt;
+but was not." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
+Expecting:
+ &lt;SCALENE&gt;
+to be equal to:
+ &lt;INVALID&gt;
+but was not.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at it.unimi.di.vec.TriangleTest.testInvalid3(TriangleTest.java:37)
+</failure>
+  </testcase>
   <testcase classname="it.unimi.di.vec.TriangleTest" name="it.unimi.di.vec.TriangleTest.testInvalidNeg1" time="0"/>
 </testsuite>
