@@ -3,7 +3,7 @@
 Introduzione su analisi mutazionale di ordine superiore utilizzando due tool _Java_: _PIT-HOM_ e _LittleDarwin_.
 
 ## PIT-HOM
-Per installare PIT-HOM clonare il seguente [repository](https://github.com/ucd-csl/pitest) ed eseguire il comando ``` mvn install ``` all'interno della directory del progetto per installare localmente il tool. 
+Per utilizzare PIT-HOM all'interno di un proprio progetto clonare il seguente [repository](https://github.com/ucd-csl/pitest) ed eseguire il comando ``` mvn install ``` per installare localmente il tool. 
 
 Successivamente sarà possibile specificare il plugin all'interno del file _pom.xml_:
 
