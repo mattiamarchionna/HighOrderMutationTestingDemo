@@ -2,7 +2,7 @@
 
 [![pipeline status](https://gitlab.com/mattiamarchionna/highordermutationtestingdemo/badges/master/pipeline.svg)](https://gitlab.com/mattiamarchionna/highordermutationtestingdemo/-/commits/master)
 
-Introduzione su analisi mutazionale di ordine superiore utilizzando due tool _Java_: _PIT-HOM_ e _LittleDarwin_.
+Relazione su analisi mutazionale di ordine superiore utilizzando due tool Java: **_PIT-HOM_** e **_LittleDarwin_**. Presentazione: [HOMT.pdf](https://gitlab.com/mattiamarchionna/highordermutationtestingdemo/-/blob/presentation/HOMT.pdf)
 
 ## PIT-HOM
 Per utilizzare PIT-HOM all'interno di un proprio progetto clonare il seguente [repository](https://github.com/ucd-csl/pitest) ed eseguire il comando ``` mvn install ``` per installare localmente il tool. 
