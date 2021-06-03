@@ -1,0 +1,76 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .RelationalOperatorReplacement { background: #FFA07A; } .ShiftOperatorReplacement { background: #9ACD32; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .ConditionalOperatorReplacement { background: #87CEFA; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .LogicalOperatorReplacement { background: #F0E68C; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 1.29</p><div><pre class="code"><span class="outsideLine"><i>0001</i> package it.unimi.di.vec;                                                
+</span><span class="outsideLine"><i>0002</i>                                                                         
+</span><span class="outsideLine"><i>0003</i> public class Triangle {                                                 
+</span><span class="methodLine"><i>0004</i>   public static TriangleType classify(int a, int b, int c) {            
+</span><span class="methodLine"><i>0005</i>     if (isNotValidTriangle(a, b, c) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 158</span>||</span> areThereNegativeSides(a, b, c)) {
+</span><span class="methodLine"><i>0006</i>       return TriangleType.INVALID;                                      
+</span><span class="methodLine"><i>0007</i>     } else if (a <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 214</span>==</span> b <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 185</span>&&</span> b <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 216</span>==</span> c) {                                      
+</span><span class="methodLine"><i>0008</i>       return TriangleType.EQUILATERAL;                                  
+</span><span class="methodLine"><i>0009</i>     } else if (a <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 309</span>!=</span> b <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 265</span>&&</span> b <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 311</span>!=</span> c <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 221</span>&&</span> a <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 267</span>!=</span> c) {                            
+</span><span class="methodLine"><i>0010</i>       return TriangleType.SCALENE;                                      
+</span><span class="methodLine"><i>0011</i>     } else {                                                            
+</span><span class="methodLine"><i>0012</i>       return TriangleType.ISOSCELES;                                    
+</span><span class="methodLine"><i>0013</i>     }                                                                   
+</span><span class="methodLine"><i>0014</i>   }                                                                     
+</span><span class="outsideLine"><i>0015</i>                                                                         
+</span><span class="methodLine"><i>0016</i>   private static boolean isNotValidTriangle(int a, int b, int c) {      
+</span><span class="methodLine"><i>0017</i>     return a <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 225</span>+</span> b <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 193</span><=</span> c <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 169</span>||</span> a <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 228</span>+</span> c <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 195</span><=</span> b <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 143</span>||</span> b <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 196</span>+</span> c <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 171</span><=</span> a;                      
+</span><span class="methodLine"><i>0018</i>   }                                                                     
+</span><span class="outsideLine"><i>0019</i>                                                                         
+</span><span class="methodLine"><i>0020</i>   private static boolean areThereNegativeSides(int a, int b, int c){    
+</span><span class="methodLine"><i>0021</i>     return a <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 199</span><=</span> 0 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 175</span>||</span> b <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 201</span><=</span> 0 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 152</span>||</span> c <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 177</span><=</span> 0;                                  
+</span><span class="methodLine"><i>0022</i>   }                                                                     
+</span><span class="outsideLine"><i>0023</i> }                                                                       
+</span><span class="outsideLine"><i>0024</i>                                                                         </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.6 </p></footer></body></html>

@@ -1,0 +1,3 @@
+Triangle.areThereNegativeSides( int a , int b , int c );1;3;3
+Triangle.classify( int a , int b , int c );1;8;11
+Triangle.isNotValidTriangle( int a , int b , int c );1;3;3
