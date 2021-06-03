@@ -1,7 +1,7 @@
 image: maven
 
 build:
-  stage: compile
+  stage: build
   script: mvn compile
   cache:
     key: "$CI_COMMIT_REF_NAME"
