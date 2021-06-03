@@ -1,5 +1,7 @@
 # High Order Mutation Testing Demo
 
+[![pipeline status](https://gitlab.com/mattiamarchionna/highordermutationtestingdemo/badges/master/pipeline.svg)](https://gitlab.com/mattiamarchionna/highordermutationtestingdemo/-/commits/master)
+
 ## PIT-HOM
 Per installare PIT-HOM clonare il seguente [repository](https://github.com/ucd-csl/pitest) ed eseguire il comando ``` mvn install ``` all'interno della directory del progetto per installare localmente il tool. 
 
