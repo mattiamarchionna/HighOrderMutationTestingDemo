@@ -1,4 +1,4 @@
-# PitHomDemo
+# High Order Mutation Testing Demo
 Comandi per generare il report di PIT-HOM:
 ```console
 mvn clean
