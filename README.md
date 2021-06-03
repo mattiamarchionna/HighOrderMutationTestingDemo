@@ -1,4 +1,6 @@
-# High Order Mutation Testing Demo [![pipeline status](https://gitlab.com/mattiamarchionna/highordermutationtestingdemo/badges/master/pipeline.svg)](https://gitlab.com/mattiamarchionna/highordermutationtestingdemo/-/commits/master)
+# High Order Mutation Testing Demo
+
+[![pipeline status](https://gitlab.com/mattiamarchionna/highordermutationtestingdemo/badges/master/pipeline.svg)](https://gitlab.com/mattiamarchionna/highordermutationtestingdemo/-/commits/master)
 
 Introduzione su analisi mutazionale di ordine superiore utilizzando due tool _Java_: _PIT-HOM_ e _LittleDarwin_.
 
