@@ -1,38 +1,31 @@
 /* LittleDarwin generated order-2 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:     return a + b <= c || a + c <= b || b + c <= a;
-----> after:     return a + b <= c || a + c <= b || b - c <= a;
-----> line number in original file: 17
-----> mutated node: 196
+mutant type: RemoveMethod
+----> before:     public static TriangleType classify(int a, int b, int c) {
+----> after:     public static TriangleType classify(int a, int b, int c) {
+----> line number in original file: 4
+----> mutated node: 49
 
-mutant type: RelationalOperatorReplacement
-----> before:     return a <= 0 || b <= 0 || c <= 0;
-----> after:     return a > 0 || b <= 0 || c <= 0;
-----> line number in original file: 21
-----> mutated node: 199
+mutant type: ConditionalOperatorReplacement
+----> before:         } else if (a != b && b != c && a != c) {
+----> after:         } else if (a != b && b != c || a != c) {
+----> line number in original file: 9
+----> mutated node: 221
 
 */
 
-package it.unimi.di.vec;
+pac||ge it.unimi.di.vec;
 
 public class Triangle {
-  public static TriangleType classify(int a, int b, int c) {
-    if (isNotValidTriangle(a, b, c) || areThereNegativeSides(a, b, c)) {
-      return TriangleType.INVALID;
-    } else if (a == b && b == c) {
-      return TriangleType.EQUILATERAL;
-    } else if (a != b && b != c && a != c) {
-      return TriangleType.SCALENE;
-    } else {
-      return TriangleType.ISOSCELES;
+    public static TriangleType classify(int a, int b, int c) {
+    return null;
+}
+
+
+    private static boolean isNotValidTriangle(int a, int b, int c) {
+        return a + b <= c || a + c <= b || b + c <= a;
     }
-  }
 
-  private static boolean isNotValidTriangle(int a, int b, int c) {
-    return a + b <= c || a + c <= b || b - c <= a;
-  }
-
-  private static boolean areThereNegativeSides(int a, int b, int c){
-    return a > 0 || b <= 0 || c <= 0;
-  }
+    private static boolean areThereNegativeSides(int a, int b, int c) {
+        return a <= 0 || b <= 0 || c <= 0;
+    }
 }

@@ -6,23 +6,32 @@
                     .tooltip .tooltiptext { visibility: hidden; display: block;
                         background-color: #006400; color: #ffffff; text-align: left;
                         border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
-                    .tooltip:hover .tooltiptext { visibility: visible; } .RelationalOperatorReplacement { background: #FFA07A; } .ShiftOperatorReplacement { background: #9ACD32; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .ConditionalOperatorReplacement { background: #87CEFA; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .LogicalOperatorReplacement { background: #F0E68C; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 1.29</p><div><pre class="code"><span class="outsideLine"><i>0001</i> package it.unimi.di.vec;                                                
-</span><span class="outsideLine"><i>0002</i>                                                                         
-</span><span class="outsideLine"><i>0003</i> public class Triangle {                                                 
-</span><span class="methodLine"><i>0004</i>   public static TriangleType classify(int a, int b, int c) {            
-</span><span class="methodLine"><i>0005</i>     if (isNotValidTriangle(a, b, c) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+                    .tooltip:hover .tooltiptext { visibility: visible; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .NullifyObjectInitialization { background: #F08080; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .ConditionalOperatorReplacement { background: #87CEFA; } .RemoveNullCheck { background: #ADD8E6; } .NullifyInputVariable { background: #90EE90; } .LogicalOperatorReplacement { background: #F0E68C; } .RelationalOperatorReplacement { background: #FFA07A; } .RemoveMethod { background: #FF00D4; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyReturnValue { background: #E0FFFF; } .ShiftOperatorReplacement { background: #9ACD32; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 1.82</p><div><pre class="code"><span class="outsideLine"><i>0001</i> package it.unimi.di.vec;                                                    
+</span><span class="outsideLine"><i>0002</i>                                                                             
+</span><span class="outsideLine"><i>0003</i> public class Triangle {                                                     
+</span><span class="methodLine"><i>0004</i>     public static TriangleType classify(int a, int b, int c) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 49</span>{              
+</span><span class="methodLine"><i>0005</i>         if (isNotValidTriangle(a, b, c) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
 Mutation Operator Type: ConditionalOperatorReplacement 
 Node ID: 158</span>||</span> areThereNegativeSides(a, b, c)) {
-</span><span class="methodLine"><i>0006</i>       return TriangleType.INVALID;                                      
-</span><span class="methodLine"><i>0007</i>     } else if (a <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+</span><span class="methodLine"><i>0006</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 213</span>return TriangleType.INVALID;</span>                                    
+</span><span class="methodLine"><i>0007</i>         } else if (a <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
 Mutation Operator Type: RelationalOperatorReplacement 
 Node ID: 214</span>==</span> b <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
 Mutation Operator Type: ConditionalOperatorReplacement 
 Node ID: 185</span>&&</span> b <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
 Mutation Operator Type: RelationalOperatorReplacement 
 Node ID: 216</span>==</span> c) {                                      
-</span><span class="methodLine"><i>0008</i>       return TriangleType.EQUILATERAL;                                  
-</span><span class="methodLine"><i>0009</i>     } else if (a <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+</span><span class="methodLine"><i>0008</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 264</span>return TriangleType.EQUILATERAL;</span>                                
+</span><span class="methodLine"><i>0009</i>         } else if (a <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
 Mutation Operator Type: RelationalOperatorReplacement 
 Node ID: 309</span>!=</span> b <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
 Mutation Operator Type: ConditionalOperatorReplacement 
@@ -33,14 +42,23 @@ Mutation Operator Type: ConditionalOperatorReplacement
 Node ID: 221</span>&&</span> a <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
 Mutation Operator Type: RelationalOperatorReplacement 
 Node ID: 267</span>!=</span> c) {                            
-</span><span class="methodLine"><i>0010</i>       return TriangleType.SCALENE;                                      
-</span><span class="methodLine"><i>0011</i>     } else {                                                            
-</span><span class="methodLine"><i>0012</i>       return TriangleType.ISOSCELES;                                    
-</span><span class="methodLine"><i>0013</i>     }                                                                   
-</span><span class="methodLine"><i>0014</i>   }                                                                     
-</span><span class="outsideLine"><i>0015</i>                                                                         
-</span><span class="methodLine"><i>0016</i>   private static boolean isNotValidTriangle(int a, int b, int c) {      
-</span><span class="methodLine"><i>0017</i>     return a <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+</span><span class="methodLine"><i>0010</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 315</span>return TriangleType.SCALENE;</span>                                    
+</span><span class="methodLine"><i>0011</i>         } else {                                                            
+</span><span class="methodLine"><i>0012</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 316</span>return TriangleType.ISOSCELES;</span>                                  
+</span><span class="methodLine"><i>0013</i>         }                                                                   
+</span><span class="methodLine"><i>0014</i>     }</span>                                                                       
+</span><span class="outsideLine"><i>0015</i>                                                                             
+</span><span class="methodLine"><i>0016</i>     private static boolean isNotValidTriangle(int a, int b, int c) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return true;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 55</span>{        
+</span><span class="methodLine"><i>0017</i>         return a <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
 Mutation Operator Type: ArithmeticOperatorReplacementBinary 
 Node ID: 225</span>+</span> b <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
 Mutation Operator Type: RelationalOperatorReplacement 
@@ -57,10 +75,15 @@ Mutation Operator Type: ArithmeticOperatorReplacementBinary
 Node ID: 196</span>+</span> c <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
 Mutation Operator Type: RelationalOperatorReplacement 
 Node ID: 171</span><=</span> a;                      
-</span><span class="methodLine"><i>0018</i>   }                                                                     
-</span><span class="outsideLine"><i>0019</i>                                                                         
-</span><span class="methodLine"><i>0020</i>   private static boolean areThereNegativeSides(int a, int b, int c){    
-</span><span class="methodLine"><i>0021</i>     return a <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+</span><span class="methodLine"><i>0018</i>     }</span>                                                                       
+</span><span class="outsideLine"><i>0019</i>                                                                             
+</span><span class="methodLine"><i>0020</i>     private static boolean areThereNegativeSides(int a, int b, int c) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return true;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 61</span>{     
+</span><span class="methodLine"><i>0021</i>         return a <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
 Mutation Operator Type: RelationalOperatorReplacement 
 Node ID: 199</span><=</span> 0 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
 Mutation Operator Type: ConditionalOperatorReplacement 
@@ -71,6 +94,6 @@ Mutation Operator Type: ConditionalOperatorReplacement
 Node ID: 152</span>||</span> c <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
 Mutation Operator Type: RelationalOperatorReplacement 
 Node ID: 177</span><=</span> 0;                                  
-</span><span class="methodLine"><i>0022</i>   }                                                                     
-</span><span class="outsideLine"><i>0023</i> }                                                                       
-</span><span class="outsideLine"><i>0024</i>                                                                         </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.6 </p></footer></body></html>
+</span><span class="methodLine"><i>0022</i>     }</span>                                                                       
+</span><span class="outsideLine"><i>0023</i> }                                                                           
+</span><span class="outsideLine"><i>0024</i>                                                                             </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.6 </p></footer></body></html>

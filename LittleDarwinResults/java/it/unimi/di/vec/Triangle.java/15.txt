@@ -9,7 +9,7 @@
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ HOMTDemo ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 0 resource
+[INFO] skip non existing resourceDirectory C:\Users\matti\Desktop\PitHomDemo\src\main\resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ HOMTDemo ---
 [INFO] Changes detected - recompiling the module!
@@ -30,8 +30,8 @@
  T E S T S
 -------------------------------------------------------
 Running it.unimi.di.vec.TriangleTest
-Tests run: 13, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.157 sec <<< FAILURE!
-it.unimi.di.vec.TriangleTest.testIsosceles2()  Time elapsed: 0.048 sec  <<< FAILURE!
+Tests run: 13, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.116 sec <<< FAILURE!
+it.unimi.di.vec.TriangleTest.testIsosceles2()  Time elapsed: 0.037 sec  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 Expecting:
  <INVALID>
@@ -43,17 +43,17 @@ but was not.
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at it.unimi.di.vec.TriangleTest.testIsosceles2(TriangleTest.java:73)
 
-it.unimi.di.vec.TriangleTest.testEquilateral()  Time elapsed: 0 sec  <<< FAILURE!
+it.unimi.di.vec.TriangleTest.testIsosceles3()  Time elapsed: 0 sec  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 Expecting:
  <INVALID>
 to be equal to:
- <EQUILATERAL>
+ <ISOSCELES>
 but was not.
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at it.unimi.di.vec.TriangleTest.testEquilateral(TriangleTest.java:61)
+	at it.unimi.di.vec.TriangleTest.testIsosceles3(TriangleTest.java:79)
 
 it.unimi.di.vec.TriangleTest.testIsosceles1()  Time elapsed: 0 sec  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
@@ -79,34 +79,34 @@ but was not.
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at it.unimi.di.vec.TriangleTest.testScalene(TriangleTest.java:19)
 
-it.unimi.di.vec.TriangleTest.testIsosceles3()  Time elapsed: 0 sec  <<< FAILURE!
+it.unimi.di.vec.TriangleTest.testEquilateral()  Time elapsed: 0 sec  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 Expecting:
  <INVALID>
 to be equal to:
- <ISOSCELES>
+ <EQUILATERAL>
 but was not.
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at it.unimi.di.vec.TriangleTest.testIsosceles3(TriangleTest.java:79)
+	at it.unimi.di.vec.TriangleTest.testEquilateral(TriangleTest.java:61)
 
 
 Results :
 
 Failed tests:   it.unimi.di.vec.TriangleTest.testIsosceles2(): (..)
-  it.unimi.di.vec.TriangleTest.testEquilateral(): (..)
+  it.unimi.di.vec.TriangleTest.testIsosceles3(): (..)
   it.unimi.di.vec.TriangleTest.testIsosceles1(): (..)
   it.unimi.di.vec.TriangleTest.testScalene(): (..)
-  it.unimi.di.vec.TriangleTest.testIsosceles3(): (..)
+  it.unimi.di.vec.TriangleTest.testEquilateral(): (..)
 
 Tests run: 13, Failures: 5, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.580 s
-[INFO] Finished at: 2021-06-03T12:31:59+02:00
+[INFO] Total time:  3.211 s
+[INFO] Finished at: 2021-06-04T11:13:11+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project HOMTDemo: There are test failures.
 [ERROR] 
