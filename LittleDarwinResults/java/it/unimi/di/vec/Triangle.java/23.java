@@ -1,9 +1,24 @@
+/* LittleDarwin generated order-2 mutant
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:             trian = trian + 2;
+----> after:             trian = trian - 2;
+----> line number in original file: 14
+----> mutated node: 366
+
+mutant type: ConditionalOperatorReplacement
+----> before:         if ((a <= 0) || (b <= 0) || (c <= 0)) {
+----> after:         if ((a <= 0) || (b <= 0) && (c <= 0)) {
+----> line number in original file: 6
+----> mutated node: 123
+
+*/
+
 package it.unimi.di.vec;
 
 public class Triangle {
     public static TriangleType classify(final int a, final int b, final int c) {
         int trian;
-        if ((a <= 0) || (b <= 0) || (c <= 0)) {
+        if ((a <= 0) || (b <= 0) && (c <= 0)) {
             return TriangleType.INVALID;
         }
         trian = 0;
@@ -11,7 +26,7 @@ public class Triangle {
             trian = trian + 1;
         }
         if (a == c) {
-            trian = trian + 2;
+            trian = trian - 2;
         }
         if (b == c) {
             trian = trian + 3;

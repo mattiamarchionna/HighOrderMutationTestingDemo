@@ -1,3 +1,18 @@
+/* LittleDarwin generated order-2 mutant
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:             if (((a + b) < c) || ((a + c) < b) || ((b + c) < a)) {
+----> after:             if (((a - b) < c) || ((a + c) < b) || ((b + c) < a)) {
+----> line number in original file: 20
+----> mutated node: 563
+
+mutant type: RelationalOperatorReplacement
+----> before:         if (trian > 3) {
+----> after:         if (trian <= 3) {
+----> line number in original file: 26
+----> mutated node: 144
+
+*/
+
 package it.unimi.di.vec;
 
 public class Triangle {
@@ -17,13 +32,13 @@ public class Triangle {
             trian = trian + 3;
         }
         if (trian == 0) {
-            if (((a + b) < c) || ((a + c) < b) || ((b + c) < a)) {
+            if (((a - b) < c) || ((a + c) < b) || ((b + c) < a)) {
                 return TriangleType.INVALID;
             } else {
                 return TriangleType.SCALENE;
             }
         }
-        if (trian > 3) {
+        if (trian <= 3) {
             return TriangleType.EQUILATERAL;
         }
         if ((trian == 1) && ((a + b) > c)) {

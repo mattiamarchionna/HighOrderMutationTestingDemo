@@ -1,0 +1,94 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< it.unimi.di.vec.pithom:HOMTDemo >-------------------
+[INFO] Building HOMTDemo 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ HOMTDemo ---
+[INFO] Deleting C:\Users\matti\Desktop\PitHomDemo\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ HOMTDemo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\matti\Desktop\PitHomDemo\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ HOMTDemo ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\Users\matti\Desktop\PitHomDemo\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ HOMTDemo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\matti\Desktop\PitHomDemo\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ HOMTDemo ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Users\matti\Desktop\PitHomDemo\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ HOMTDemo ---
+[INFO] Surefire report directory: C:\Users\matti\Desktop\PitHomDemo\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running it.unimi.di.vec.TriangleTest
+Tests run: 12, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.129 sec <<< FAILURE!
+it.unimi.di.vec.TriangleTest.testIsosceles1()  Time elapsed: 0.04 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Expecting:
+ <INVALID>
+to be equal to:
+ <ISOSCELES>
+but was not.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at it.unimi.di.vec.TriangleTest.testIsosceles1(TriangleTest.java:61)
+
+it.unimi.di.vec.TriangleTest.testEquilateral()  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Expecting:
+ <SCALENE>
+to be equal to:
+ <EQUILATERAL>
+but was not.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at it.unimi.di.vec.TriangleTest.testEquilateral(TriangleTest.java:55)
+
+it.unimi.di.vec.TriangleTest.testIsosceles3()  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Expecting:
+ <INVALID>
+to be equal to:
+ <ISOSCELES>
+but was not.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at it.unimi.di.vec.TriangleTest.testIsosceles3(TriangleTest.java:73)
+
+
+Results :
+
+Failed tests:   it.unimi.di.vec.TriangleTest.testIsosceles1(): (..)
+  it.unimi.di.vec.TriangleTest.testEquilateral(): (..)
+  it.unimi.di.vec.TriangleTest.testIsosceles3(): (..)
+
+Tests run: 12, Failures: 3, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.944 s
+[INFO] Finished at: 2021-06-08T11:52:22+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project HOMTDemo: There are test failures.
+[ERROR] 
+[ERROR] Please refer to C:\Users\matti\Desktop\PitHomDemo\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

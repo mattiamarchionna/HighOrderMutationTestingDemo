@@ -8,12 +8,6 @@ import org.junit.jupiter.api.Test;
 public class TriangleTest {
 
     @Test
-    public void test1() {
-        final TriangleType type = Triangle.classify(1, 2, 3);
-        assertThat(type).isEqualTo(INVALID);
-    }
-
-    @Test
     public void testScalene() {
         final TriangleType type = Triangle.classify(2, 3, 4);
         assertThat(type).isEqualTo(SCALENE);

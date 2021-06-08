@@ -1,3 +1,18 @@
+/* LittleDarwin generated order-2 mutant
+mutant type: ConditionalOperatorReplacement
+----> before:             if (((a + b) < c) || ((a + c) < b) || ((b + c) < a)) {
+----> after:             if (((a + b) < c) && ((a + c) < b) || ((b + c) < a)) {
+----> line number in original file: 20
+----> mutated node: 370
+
+mutant type: RelationalOperatorReplacement
+----> before:         } else if ((trian == 2) && ((a + c) > b)) {
+----> after:         } else if ((trian != 2) && ((a + c) > b)) {
+----> line number in original file: 31
+----> mutated node: 341
+
+*/
+
 package it.unimi.di.vec;
 
 public class Triangle {
@@ -17,7 +32,7 @@ public class Triangle {
             trian = trian + 3;
         }
         if (trian == 0) {
-            if (((a + b) < c) || ((a + c) < b) || ((b + c) < a)) {
+            if (((a + b) < c) && ((a + c) < b) || ((b + c) < a)) {
                 return TriangleType.INVALID;
             } else {
                 return TriangleType.SCALENE;
@@ -28,7 +43,7 @@ public class Triangle {
         }
         if ((trian == 1) && ((a + b) > c)) {
             return TriangleType.ISOSCELES;
-        } else if ((trian == 2) && ((a + c) > b)) {
+        } else if ((trian != 2) && ((a + c) > b)) {
             return TriangleType.ISOSCELES;
         } else if ((trian == 3) && ((b + c) > a)) {
             return TriangleType.ISOSCELES;

@@ -1,9 +1,24 @@
+/* LittleDarwin generated order-2 mutant
+mutant type: RelationalOperatorReplacement
+----> before:         if ((a <= 0) || (b <= 0) || (c <= 0)) {
+----> after:         if ((a <= 0) || (b > 0) || (c <= 0)) {
+----> line number in original file: 6
+----> mutated node: 309
+
+mutant type: RelationalOperatorReplacement
+----> before:         if ((trian == 1) && ((a + b) > c)) {
+----> after:         if ((trian != 1) && ((a + b) > c)) {
+----> line number in original file: 29
+----> mutated node: 288
+
+*/
+
 package it.unimi.di.vec;
 
 public class Triangle {
     public static TriangleType classify(final int a, final int b, final int c) {
         int trian;
-        if ((a <= 0) || (b <= 0) || (c <= 0)) {
+        if ((a <= 0) || (b > 0) || (c <= 0)) {
             return TriangleType.INVALID;
         }
         trian = 0;
@@ -26,7 +41,7 @@ public class Triangle {
         if (trian > 3) {
             return TriangleType.EQUILATERAL;
         }
-        if ((trian == 1) && ((a + b) > c)) {
+        if ((trian != 1) && ((a + b) > c)) {
             return TriangleType.ISOSCELES;
         } else if ((trian == 2) && ((a + c) > b)) {
             return TriangleType.ISOSCELES;
