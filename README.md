@@ -1,6 +1,6 @@
 # High Order Mutation Testing Demo
 
-[![pipeline status](https://gitlab.com/mattiamarchionna/highordermutationtestingdemo/badges/master/pipeline.svg)](https://gitlab.com/mattiamarchionna/highordermutationtestingdemo/-/commits/master) [![](https://img.shields.io/badge/Language-Java%2011-blue.svg)](https://img.shields.io/badge/Language-Java%2011-blue.svg)
+[![](https://img.shields.io/badge/Language-Java%2011-blue.svg)](https://img.shields.io/badge/Language-Java%2011-blue.svg)
 
 Relazione su analisi mutazionale di ordine superiore utilizzando due tool Java: **_PIT-HOM_** e **_LittleDarwin_**. Presentazione: [HOMT.pdf](https://gitlab.com/mattiamarchionna/highordermutationtestingdemo/-/blob/presentation/HOMT.pdf)
 
